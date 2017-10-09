@@ -16,11 +16,6 @@ Install Selenium Webdriver using npm.
 npm install --save--dev selenium-webdriver
 ```
 
-Run parallel using npm.
-```
-npm install wd-parallel
-```
-
 More info and documentation in [Webdriver.io] (http://webdriver.io/)
 [GitHub Pages](https://pages.github.com/)
 
@@ -33,4 +28,11 @@ More info and documentation in [Webdriver.io] (http://webdriver.io/)
 
 I used Standalone Mode witch is a better suit for a small test. WDIO testrunner works better with bigger scales testing and has custom reporter options that can be selected while configuring wdio.config.js. <br>
 The challenge was very clear and the documentation available is more than enough to avoid not having much technical problems. <br>
-In my case, I ran out of time setting up Standalone and working on both tests, checking async options and reading documentation about it. And later going back to WDIO and continuing setting up the envioroments. But both implementation are working properly.
+In my case, I ran out of time setting up Standalone and working on both tests, checking async options and reading documentation about it. And later going back to WDIO and continuing setting up the envioroments. All of this took time from finishing the parallel testing I was working on using.
+```
+npm install wd-parallel
+```<br>
+
+But both implementation are working properly.
+
+
