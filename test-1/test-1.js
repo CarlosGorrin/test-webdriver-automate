@@ -1,19 +1,20 @@
-var webdriver = require('selenium-webdriver');
-var By = webdriver.By;
-var until = webdriver.until;
+const {Builder, By, Key, promise, until} = require('selenium-webdriver');
 
-var driver = new webdriver.Builder()
+var driver = new Builder()
     .forBrowser('chrome')
     .build();
 
-
 driver.get('http://webdriver.io')
-    .then(_ => 
-    	driver(title('WebdriverIO - WebDriver bindings for Node.js'), 1000))
+	
+	.then(_ =>
+        driver.getTitle().then(function(title) {console.log(title)}))
     .then(_ =>
         driver.findElement(By.className('header')))
     .then(_ =>
-        driver.findElementBy.tagName('input').sendKeys('THE BROWSER OBJECT', Key.RETURN))
-    .then(_ => driver.wait(until.titleIs('webdriver - Google Search'), 1000))
-    console.log('Working properly!');
+        driver.findElement(By.className('getstarted')))
+    .then(_ =>
+        driver.findElement(By.tagName("input")).sendKeys('The Browser Object'), 1000)
+    
+    .then(_ => driver.quit());
+    console.log('Test running');
    
